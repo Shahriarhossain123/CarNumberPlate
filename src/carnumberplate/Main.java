@@ -4,11 +4,21 @@
  */
 package carnumberplate;
 
+import Controller.configurator.Configurator;
+import Controller.gui.ReportGenerator;
+import View.gui.windows.FrameComponentInit;
+import View.gui.windows.FrameMain;
+import Model.imageanalysis.CarSnapshot;
+import Model.imageanalysis.Char;
+import Controller.intelligence.Intelligence;
+import Controller.recognizer.NeuralPatternClassifier;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 /**
  *
  * @author shahr
  */
-public class CarNumberPlate {
+public class Main {
 
     /**
      * @param args the command line arguments
