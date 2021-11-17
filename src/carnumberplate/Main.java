@@ -8,6 +8,7 @@ import Controller.configurator.Configurator;
 import Controller.gui.ReportGenerator;
 import View.Home.Home;
 import View.Home.CarEntry;
+import View.Home.Loading;
 import Model.imageanalysis.CarSnapshot;
 import Model.imageanalysis.Char;
 import Controller.intelligence.Intelligence;
@@ -130,10 +131,10 @@ public final class Main {
     public static void main(String[] args) throws Exception { // TODO refactor
         if ((args.length == 0) || ((args.length == 1) && args[0].equals("-gui"))) { // gui
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-            FrameComponentInit frameComponentInit = new FrameComponentInit(); // show wait
+            Loading frameComponentInit = new Loading(); // show wait
             Main.systemLogic = new Intelligence();
             frameComponentInit.dispose(); // hide wait
-            new FrameMain();
+            new Home();
         } else if ((args.length == 3) && args[0].equals("-recognize") && args[1].equals("-i")) {
             // load snapshot args[2] and recognize it
             Main.systemLogic = new Intelligence();
