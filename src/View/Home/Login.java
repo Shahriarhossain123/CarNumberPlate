@@ -5,8 +5,9 @@
  */
 package View.Home;
 
-import javax.swing.UIManager;
-
+import Controller.tool.JavaConnection;
+import javax.swing.*;
+import java.sql.*;
 /**
  *
  * @author Shishir
@@ -16,9 +17,15 @@ public class Login extends javax.swing.JFrame {
     /**
      * Creates new form Login
      */
+    
+    Connection con;
+    PreparedStatement pst;
+    ResultSet rst;
+    
     public Login() {
         super("Login");
         initComponents();
+        con=JavaConnection.dBConnect();
     }
 
     /**

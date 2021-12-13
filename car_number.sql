@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 13, 2021 at 11:44 AM
+-- Generation Time: Dec 13, 2021 at 07:48 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `car_number`
 --
-CREATE DATABASE IF NOT EXISTS `car_number` DEFAULT CHARACTER SET utf32 COLLATE utf32_general_ci;
-USE `car_number`;
 
 -- --------------------------------------------------------
 
@@ -38,6 +36,25 @@ CREATE TABLE `car` (
   `modified_date` timestamp NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf32;
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL,
+  `username` varchar(45) NOT NULL,
+  `password` varchar(45) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf32;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id`, `username`, `password`) VALUES
+(1, 'admin', 'admin');
+
 --
 -- Indexes for dumped tables
 --
@@ -49,6 +66,12 @@ ALTER TABLE `car`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -57,6 +80,12 @@ ALTER TABLE `car`
 --
 ALTER TABLE `car`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
