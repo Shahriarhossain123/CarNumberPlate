@@ -30,6 +30,7 @@ import java.awt.event.ActionEvent;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import javax.swing.UIManager;
 
 public class CarEntry extends JFrame {
 
@@ -89,9 +90,6 @@ public class CarEntry extends JFrame {
         JMenu imageMenu = new JMenu();
         JMenuItem openItem = new JMenuItem();
         JMenuItem exitItem = new JMenuItem();
-        JMenu helpMenu = new JMenu();
-        JMenuItem aboutItem = new JMenuItem();
-        JMenuItem helpItem = new JMenuItem();
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setTitle("JavaANPR");
         setResizable(false);
@@ -131,17 +129,7 @@ public class CarEntry extends JFrame {
         exitItem.addActionListener(this::exitItemActionPerformed);
         imageMenu.add(exitItem);
         menuBar.add(imageMenu);
-        helpMenu.setText("Help");
-        helpMenu.setFont(arial11);
-        aboutItem.setFont(arial11);
-        aboutItem.setText("About");
-        aboutItem.addActionListener(this::aboutItemActionPerformed);
-        helpMenu.add(aboutItem);
-        helpItem.setFont(arial11);
-        helpItem.setText("Help");
-        helpItem.addActionListener(this::helpItemActionPerformed);
-        helpMenu.add(helpItem);
-        menuBar.add(helpMenu);
+   
         setJMenuBar(menuBar);
         GroupLayout layout = new GroupLayout(getContentPane());
         getContentPane().setLayout(layout); // TODO refactor
@@ -276,5 +264,38 @@ public class CarEntry extends JFrame {
                 e.printStackTrace();
             }
         }
+    }
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+                UIManager.setLookAndFeel("com.jtattoo.plaf.smart.SmartLookAndFeel");
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(Home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(Home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(Home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new CarEntry().setVisible(true);
+            }
+        });
     }
 }
