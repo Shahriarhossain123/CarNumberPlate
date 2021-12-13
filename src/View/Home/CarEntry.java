@@ -248,12 +248,7 @@ public class CarEntry extends JFrame {
             String recognizedText;
             parentFrame.recognitionLabel.setText("processing...");
             int index = parentFrame.selectedIndex;
-            try {
-                recognizedText = Main.systemLogic.recognize(parentFrame.car, false);
-            } catch (IllegalArgumentException | IOException exception) {
-                setFailedAndPrintStackTrace(exception);
-                return;
-            }
+            recognizedText = Main.systemLogic.recognize(parentFrame.car, false);
             parentFrame.recognitionLabel.setText(recognizedText);
             parentFrame.fileListModel.get(index).setRecognizedPlate(recognizedText);
         }

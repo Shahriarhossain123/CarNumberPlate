@@ -293,4 +293,8 @@ public class Intelligence {
         }
         return null;
     }
+
+    public String recognize(Controller.imageanalysis.CarSnapshot car, boolean b) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
