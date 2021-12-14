@@ -13,17 +13,16 @@ public class JavaConnection {
     Connection conn;
    public static Connection dBConnect()
    {
-       try{
-           
-           Class.forName("com.mysql.jdbc.Driver");  
-           Connection conn;
-           conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/car_number","root","");
-           return conn;
+       try {
             
-           
-       }catch(ClassNotFoundException | SQLException ex){
-           JOptionPane.showMessageDialog(null,"Database Connection is Error");
-       }
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql:///car_number","root","");
+            return con;
+        
+        } catch (ClassNotFoundException | SQLException ex) {
+            System.err.println(ex + ". More Work");
+            JOptionPane.showMessageDialog(null,"Database Connection is Error");
+        }
         return null;
    }
 }

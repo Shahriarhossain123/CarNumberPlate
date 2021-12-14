@@ -6,6 +6,7 @@
 package View.Home;
 
 import Controller.tool.JavaConnection;
+import java.awt.HeadlessException;
 import javax.swing.*;
 import java.sql.*;
 /**
@@ -172,7 +173,41 @@ public class Login extends javax.swing.JFrame {
         lo.setUpLoading();
         lo.setVisible(true);
     }//GEN-LAST:event_btn_loginActionPerformed
-
+private void login()
+    {
+        String sql = "SELECT * FROM librarymanagement.user_info WHERE user_name LIKE ? AND password LIKE ? ";
+        
+        try {
+            pst = con.prepareStatement(sql);
+            pst.setString(1, txt_username.getText());
+            pst.setString(2, passwordField.getText());
+            rst = pst.executeQuery();
+            
+            if (rst.next()) {
+                rst.close();
+                pst.close();
+                
+                setVisible(false);
+                new Loading().setVisible(true);
+//                Lodingfrom ob = new Lodingfrom();
+//                ob.setUpLoading();
+//                ob.setVisible(true);
+            
+            } else{
+            
+                JOptionPane.showMessageDialog(null, "Invalide User Name and Password..");
+            }
+            
+        } catch (HeadlessException | SQLException e) {
+            JOptionPane.showMessageDialog(null, "Error..");
+        } finally{
+            try {
+                rst.close();
+                pst.close();
+            } catch (SQLException e) {
+            }
+        }
+    }
     /**
      * @param args the command line arguments
      */
