@@ -19,7 +19,7 @@ public class Home extends javax.swing.JFrame {
     public Home() {
         super("Automatic Car Number Plate Recognition System");
         initComponents();
-       // setExtendedState(MAXIMIZED_BOTH);
+        setExtendedState(MAXIMIZED_BOTH);
     }
 
     private void allclose() {
@@ -41,18 +41,18 @@ public class Home extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         menuPanel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        liveViewButton = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        carEntryButton = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
+        driverEntryButton = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
+        reportButton = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        BackupButton = new javax.swing.JButton();
+        RestoreButton = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
-        jButton7 = new javax.swing.JButton();
+        logoutButton = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         menuBar = new javax.swing.JMenuBar();
         fileMenu = new javax.swing.JMenu();
@@ -74,55 +74,71 @@ public class Home extends javax.swing.JFrame {
         aboutMenuItem = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1000, 700));
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resource/menuLogo/back.jpg"))); // NOI18N
         desktopPane.add(jLabel8);
-        jLabel8.setBounds(0, 0, 800, 500);
+        jLabel8.setBounds(0, 0, 1000, 500);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Live View");
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resource/menuLogo/live_photos.png"))); // NOI18N
-        jButton1.setPreferredSize(new java.awt.Dimension(60, 60));
+        liveViewButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resource/menuLogo/live_photos.png"))); // NOI18N
+        liveViewButton.setPreferredSize(new java.awt.Dimension(60, 60));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Car Entry");
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resource/menuLogo/car.png"))); // NOI18N
-        jButton2.setPreferredSize(new java.awt.Dimension(60, 60));
+        carEntryButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resource/menuLogo/car.png"))); // NOI18N
+        carEntryButton.setPreferredSize(new java.awt.Dimension(60, 60));
+        carEntryButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                carEntryButtonActionPerformed(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Driver Entry");
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resource/menuLogo/driver.png"))); // NOI18N
-        jButton3.setPreferredSize(new java.awt.Dimension(60, 60));
+        driverEntryButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resource/menuLogo/driver.png"))); // NOI18N
+        driverEntryButton.setPreferredSize(new java.awt.Dimension(60, 60));
+        driverEntryButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                driverEntryButtonActionPerformed(evt);
+            }
+        });
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Report");
 
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resource/menuLogo/report_file.png"))); // NOI18N
-        jButton4.setPreferredSize(new java.awt.Dimension(60, 60));
+        reportButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resource/menuLogo/report_file.png"))); // NOI18N
+        reportButton.setPreferredSize(new java.awt.Dimension(60, 60));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Backup");
 
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resource/menuLogo/data_backup.png"))); // NOI18N
-        jButton5.setPreferredSize(new java.awt.Dimension(60, 60));
+        BackupButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resource/menuLogo/data_backup.png"))); // NOI18N
+        BackupButton.setPreferredSize(new java.awt.Dimension(60, 60));
 
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resource/menuLogo/restore_page.png"))); // NOI18N
-        jButton6.setPreferredSize(new java.awt.Dimension(60, 60));
+        RestoreButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resource/menuLogo/restore_page.png"))); // NOI18N
+        RestoreButton.setPreferredSize(new java.awt.Dimension(60, 60));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Restore");
 
-        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resource/menuLogo/logout.png"))); // NOI18N
-        jButton7.setPreferredSize(new java.awt.Dimension(60, 60));
+        logoutButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resource/menuLogo/logout.png"))); // NOI18N
+        logoutButton.setPreferredSize(new java.awt.Dimension(60, 60));
+        logoutButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                logoutButtonActionPerformed(evt);
+            }
+        });
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -135,31 +151,31 @@ public class Home extends javax.swing.JFrame {
             .addGroup(menuPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(liveViewButton, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(carEntryButton, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(driverEntryButton, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(reportButton, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BackupButton, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(RestoreButton, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(logoutButton, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -169,35 +185,35 @@ public class Home extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(menuPanelLayout.createSequentialGroup()
-                        .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(logoutButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel7))
                     .addGroup(menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(menuPanelLayout.createSequentialGroup()
-                            .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(RestoreButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(jLabel6))
                         .addGroup(menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(menuPanelLayout.createSequentialGroup()
-                                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(BackupButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel5))
                             .addGroup(menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addGroup(menuPanelLayout.createSequentialGroup()
-                                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(reportButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addComponent(jLabel4))
                                 .addGroup(menuPanelLayout.createSequentialGroup()
-                                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(driverEntryButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addComponent(jLabel3))
                                 .addGroup(menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(menuPanelLayout.createSequentialGroup()
-                                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(carEntryButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jLabel2))
                                     .addGroup(menuPanelLayout.createSequentialGroup()
-                                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(liveViewButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jLabel1)))))))
                 .addContainerGap(14, Short.MAX_VALUE))
@@ -285,7 +301,7 @@ public class Home extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(menuPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 800, Short.MAX_VALUE)
+            .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 1000, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -293,7 +309,7 @@ public class Home extends javax.swing.JFrame {
                 .addComponent(menuPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(desktopPane, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(65, Short.MAX_VALUE))
         );
 
         pack();
@@ -304,6 +320,32 @@ public class Home extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_exitMenuItemActionPerformed
 
+    private void carEntryButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_carEntryButtonActionPerformed
+        // TODO add your handling code here:
+        allclose();
+        CarEntry ce = new CarEntry();
+        this.desktopPane.add(ce);
+        ce.setVisible(true);
+        
+    }//GEN-LAST:event_carEntryButtonActionPerformed
+
+    private void logoutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutButtonActionPerformed
+        // TODO add your handling code here:
+        allclose();
+        setVisible(false);
+        Login la = new Login();
+        la.setVisible(true);
+    }//GEN-LAST:event_logoutButtonActionPerformed
+
+    private void driverEntryButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_driverEntryButtonActionPerformed
+        // TODO add your handling code here:
+        allclose();
+        DriverEntry de = new DriverEntry();
+        this.desktopPane.add(de);
+        de.setVisible(true);
+    }//GEN-LAST:event_driverEntryButtonActionPerformed
+
+    
     /**
      * @param args the command line arguments
      */
@@ -342,26 +384,23 @@ public class Home extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BackupButton;
+    private javax.swing.JButton RestoreButton;
     private javax.swing.JMenuItem aboutMenuItem;
     private javax.swing.JMenuItem backupMenuItem;
+    private javax.swing.JButton carEntryButton;
     private javax.swing.JMenuItem carEntryMenuItem;
     private javax.swing.JMenuItem contentMenuItem;
     private javax.swing.JMenuItem copyMenuItem;
     private javax.swing.JMenuItem cutMenuItem;
     private javax.swing.JMenuItem deleteMenuItem;
     private javax.swing.JDesktopPane desktopPane;
+    private javax.swing.JButton driverEntryButton;
     private javax.swing.JMenuItem driverEntryMenuItem;
     private javax.swing.JMenu editMenu;
     private javax.swing.JMenuItem exitMenuItem;
     private javax.swing.JMenu fileMenu;
     private javax.swing.JMenu helpMenu;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -370,10 +409,13 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JButton liveViewButton;
+    private javax.swing.JButton logoutButton;
     private javax.swing.JMenuItem logoutMenuItem;
     private javax.swing.JMenuBar menuBar;
     private javax.swing.JPanel menuPanel;
     private javax.swing.JMenuItem pasteMenuItem;
+    private javax.swing.JButton reportButton;
     private javax.swing.JMenuItem reportMenuItem;
     private javax.swing.JMenuItem restoeMenuItem;
     private javax.swing.JMenu settingMenu;

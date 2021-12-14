@@ -128,6 +128,9 @@
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[1000, 700]"/>
+    </Property>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="menuBar" type="java.lang.String" value="menuBar"/>
@@ -150,7 +153,7 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Component id="menuPanel" max="32767" attributes="0"/>
-          <Component id="desktopPane" pref="800" max="32767" attributes="0"/>
+          <Component id="desktopPane" pref="1000" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -159,7 +162,7 @@
               <Component id="menuPanel" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="desktopPane" min="-2" pref="500" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="65" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -179,7 +182,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="0" y="0" width="800" height="500"/>
+              <AbsoluteConstraints x="0" y="0" width="1000" height="500"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -193,37 +196,37 @@
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jButton1" min="-2" pref="93" max="-2" attributes="0"/>
+                      <Component id="liveViewButton" min="-2" pref="93" max="-2" attributes="0"/>
                       <Component id="jLabel1" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jButton2" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
+                      <Component id="carEntryButton" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
                       <Component id="jLabel2" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jButton3" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
+                      <Component id="driverEntryButton" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
                       <Component id="jLabel3" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jButton4" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
+                      <Component id="reportButton" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
                       <Component id="jLabel4" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jButton5" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
+                      <Component id="BackupButton" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
                       <Component id="jLabel5" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jButton6" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
+                      <Component id="RestoreButton" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
                       <Component id="jLabel6" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jButton7" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
+                      <Component id="logoutButton" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
                       <Component id="jLabel7" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
@@ -236,41 +239,41 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Component id="jButton7" min="-2" max="-2" attributes="0"/>
+                          <Component id="logoutButton" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Group type="102" attributes="0">
-                              <Component id="jButton6" min="-2" max="-2" attributes="0"/>
+                              <Component id="RestoreButton" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
-                                  <Component id="jButton5" min="-2" max="-2" attributes="0"/>
+                                  <Component id="BackupButton" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="103" groupAlignment="1" attributes="0">
                                   <Group type="102" attributes="0">
-                                      <Component id="jButton4" min="-2" max="-2" attributes="0"/>
+                                      <Component id="reportButton" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" attributes="0">
-                                      <Component id="jButton3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="driverEntryButton" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" attributes="0">
-                                          <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                                          <Component id="carEntryButton" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" attributes="0">
-                                          <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="liveViewButton" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                                       </Group>
@@ -294,7 +297,7 @@
             <Property name="text" type="java.lang.String" value="Live View"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="liveViewButton">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/Resource/menuLogo/live_photos.png"/>
@@ -313,7 +316,7 @@
             <Property name="text" type="java.lang.String" value="Car Entry"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton2">
+        <Component class="javax.swing.JButton" name="carEntryButton">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/Resource/menuLogo/car.png"/>
@@ -322,6 +325,9 @@
               <Dimension value="[60, 60]"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="carEntryButtonActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel3">
           <Properties>
@@ -332,7 +338,7 @@
             <Property name="text" type="java.lang.String" value="Driver Entry"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton3">
+        <Component class="javax.swing.JButton" name="driverEntryButton">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/Resource/menuLogo/driver.png"/>
@@ -341,6 +347,9 @@
               <Dimension value="[60, 60]"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="driverEntryButtonActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel4">
           <Properties>
@@ -351,7 +360,7 @@
             <Property name="text" type="java.lang.String" value="Report"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton4">
+        <Component class="javax.swing.JButton" name="reportButton">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/Resource/menuLogo/report_file.png"/>
@@ -370,7 +379,7 @@
             <Property name="text" type="java.lang.String" value="Backup"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton5">
+        <Component class="javax.swing.JButton" name="BackupButton">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/Resource/menuLogo/data_backup.png"/>
@@ -380,7 +389,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton6">
+        <Component class="javax.swing.JButton" name="RestoreButton">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/Resource/menuLogo/restore_page.png"/>
@@ -399,7 +408,7 @@
             <Property name="text" type="java.lang.String" value="Restore"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton7">
+        <Component class="javax.swing.JButton" name="logoutButton">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/Resource/menuLogo/logout.png"/>
@@ -408,6 +417,9 @@
               <Dimension value="[60, 60]"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="logoutButtonActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel7">
           <Properties>

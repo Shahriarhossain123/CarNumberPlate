@@ -69,8 +69,6 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
-        passwordField.setText("jPasswordField1");
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -168,14 +166,12 @@ public class Login extends javax.swing.JFrame {
 
     private void btn_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_loginActionPerformed
         // TODO add your handling code here:
-        setVisible(false);
-        Loading lo = new Loading();
-        lo.setUpLoading();
-        lo.setVisible(true);
+        login();
+        
     }//GEN-LAST:event_btn_loginActionPerformed
 private void login()
     {
-        String sql = "SELECT * FROM librarymanagement.user_info WHERE user_name LIKE ? AND password LIKE ? ";
+        String sql = "SELECT * FROM car_number.user WHERE username LIKE ? AND password LIKE ? ";
         
         try {
             pst = con.prepareStatement(sql);
@@ -188,10 +184,9 @@ private void login()
                 pst.close();
                 
                 setVisible(false);
-                new Loading().setVisible(true);
-//                Lodingfrom ob = new Lodingfrom();
-//                ob.setUpLoading();
-//                ob.setVisible(true);
+                Loading lo = new Loading();
+                lo.setUpLoading();
+                lo.setVisible(true);
             
             } else{
             
