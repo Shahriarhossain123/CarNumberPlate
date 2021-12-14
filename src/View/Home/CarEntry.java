@@ -30,10 +30,18 @@ import java.awt.event.ActionEvent;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import javax.swing.UIManager;
 
 public class CarEntry extends JFrame {
-
+    
+    Connection con;
+    PreparedStatement pst;
+    ResultSet rst;
+    
     private static final long serialVersionUID = 0L;
 
     private CarSnapshot car;
@@ -49,6 +57,44 @@ public class CarEntry extends JFrame {
     /**
      * Creates new form MainFrame.
      */
+    private void carEntrydb(){
+        try {
+                String sql ="INSERT INTO car_number.car(number_plate, plate_image, entry_time, created_date, modified_date) VALUES (?,?,?,?,?)";
+                pst=con.prepareStatement(sql);
+               // pst.setString(1,txt_book_id.getText());
+                //pst.setString(2,txt_book_name.getText());
+               // pst.setString(3,txt_author.getText());
+                //pst.setString(4,txt_edition.getText());
+                
+                
+                //if isbn field are empty
+                //String isbnget=txt_isbn.getText();
+                //int isbn=isbnget.length();
+                
+                //if(isbn!='/'){
+                //pst.setString(5,txt_isbn.getText());
+                //}
+               // else {
+                 //   pst.setString(5,isbnget);
+               // }
+                
+                
+               // pst.setString(6,(String)cmb_publisher_id.getSelectedItem());
+              //  pst.setString(7,txt_publisher_name.getText());
+             //   pst.setString(8,(String)cmb_depertment.getSelectedItem());
+             //   pst.setString(9,txt_total_pices.getText());
+             //   pst.setString(10,txt_total_pices.getText());
+            //    pst.setString(11,txt_location.getText());
+                pst.execute();
+            
+                JOptionPane.showMessageDialog(null, "Car Add Done");
+            
+            } catch (HeadlessException | SQLException e) {
+                System.out.println(e);
+                JOptionPane.showMessageDialog(null, "Plese Fill the form Correctly!");
+            }
+    }
+    
     public CarEntry() {
         initComponents();
 

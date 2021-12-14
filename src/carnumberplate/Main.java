@@ -7,7 +7,6 @@ package carnumberplate;
 import Controller.configurator.Configurator;
 import Controller.gui.ReportGenerator;
 import View.Home.Home;
-import View.Home.CarEntry;
 import View.Home.Loading;
 import Model.imageanalysis.CarSnapshot;
 import Model.imageanalysis.Char;
@@ -53,21 +52,6 @@ public final class Main {
     /**
      * The help message.
      */
-    public static final String helpText = "-----------------------------------------------------------\n"
-            + "Automatic number plate recognition system\n" + "Copyright 2013 JavaANPR contributors\n"
-            + "Copyright 2006 Ondrej Martinsky\n" + "\n"
-            + "Licensed under the Educational Community License (ECL-2.0),\n" + "\n"
-            + "Usage : java -jar anpr.jar [-options]\n" + "\n" + "Where options include:\n" + "\n"
-            + "    -help         Displays this help\n" + "    -gui          Run GUI viewer (default choice)\n"
-            + "    -recognize -i <snapshot>\n" + "                  Recognize single snapshot\n"
-            + "    -recognize -i <snapshot> -o <dstdir>\n" + "                  Recognize single snapshot and\n"
-            + "                  save report html into specified\n" + "                  directory\n"
-            + "    -newconfig -o <file>\n" + "                  Generate default configuration file\n"
-            + "    -newnetwork -o <file>\n" + "                  Train neural network according to\n"
-            + "                  specified feature extraction method and\n"
-            + "                  learning parameters (in config. file)\n"
-            + "                  and saves it into output file\n" + "    -newalphabet -i <srcdir> -o <dstdir>\n"
-            + "                  Normalize all images in <srcdir> and save\n" + "                  it to <dstdir>.";
 
     static {
         try {
@@ -153,8 +137,6 @@ public final class Main {
         } else if ((args.length == 5) && args[0].equals("-newalphabet") && args[1].equals("-i") && args[3]
                 .equals("-o")) { // transform alphabets from args[2] -> args[4]
             Main.newAlphabet(args[2], args[4]);
-        } else { // display help
-            System.out.println(Main.helpText);
         }
     }
 }
