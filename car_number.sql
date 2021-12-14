@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 13, 2021 at 07:48 PM
+-- Generation Time: Dec 14, 2021 at 12:53 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `car_number`
 --
+CREATE DATABASE IF NOT EXISTS `car_number` DEFAULT CHARACTER SET utf32 COLLATE utf32_general_ci;
+USE `car_number`;
 
 -- --------------------------------------------------------
 
@@ -29,11 +31,27 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `car` (
   `id` int(11) NOT NULL,
-  `number_plate` text DEFAULT NULL,
+  `number_plate` varchar(45) DEFAULT NULL,
   `plate_image` blob DEFAULT NULL,
-  `entry_time` timestamp NULL DEFAULT current_timestamp(),
+  `entry_time` timestamp NULL DEFAULT NULL,
   `created_date` timestamp NULL DEFAULT current_timestamp(),
   `modified_date` timestamp NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf32;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `driver`
+--
+
+CREATE TABLE `driver` (
+  `id` int(11) NOT NULL,
+  `name` varchar(45) NOT NULL,
+  `number_plate` varchar(45) NOT NULL,
+  `phone_number` int(20) NOT NULL,
+  `entry_time` timestamp NOT NULL DEFAULT current_timestamp(),
+  `created_date` timestamp NOT NULL DEFAULT current_timestamp(),
+  `modified_date` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf32;
 
 -- --------------------------------------------------------
@@ -66,6 +84,12 @@ ALTER TABLE `car`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `driver`
+--
+ALTER TABLE `driver`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
@@ -79,6 +103,12 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `car`
 --
 ALTER TABLE `car`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `driver`
+--
+ALTER TABLE `driver`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --

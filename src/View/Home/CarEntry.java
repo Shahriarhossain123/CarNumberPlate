@@ -17,8 +17,8 @@ package View.Home;
 
 import Controller.gui.tools.FileListModelEntry;
 import Controller.gui.tools.ImageFileFilter;
-import Controller.imageanalysis.CarSnapshot;
-import Controller.imageanalysis.Photo;
+import Model.imageanalysis.CarSnapshot;
+import Model.imageanalysis.Photo;
 import carnumberplate.Main;
 import org.jdesktop.layout.GroupLayout;
 import org.jdesktop.layout.LayoutStyle;
@@ -236,7 +236,12 @@ public class CarEntry extends JFrame {
             String recognizedText;
             parentFrame.recognitionLabel.setText("processing...");
             int index = parentFrame.selectedIndex;
-            recognizedText = Main.systemLogic.recognize(parentFrame.car, false);
+            try {
+                recognizedText = Main.systemLogic.recognize(parentFrame.car, false);
+            } catch (IllegalArgumentException | IOException exception) {
+                setFailedAndPrintStackTrace(exception);
+                return;
+            }
             parentFrame.recognitionLabel.setText(recognizedText);
             parentFrame.fileListModel.get(index).setRecognizedPlate(recognizedText);
         }
