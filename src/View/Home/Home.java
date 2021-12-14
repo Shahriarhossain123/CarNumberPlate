@@ -117,6 +117,11 @@ public class Home extends javax.swing.JFrame {
 
         reportButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resource/menuLogo/report_file.png"))); // NOI18N
         reportButton.setPreferredSize(new java.awt.Dimension(60, 60));
+        reportButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                reportButtonActionPerformed(evt);
+            }
+        });
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -124,9 +129,19 @@ public class Home extends javax.swing.JFrame {
 
         BackupButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resource/menuLogo/data_backup.png"))); // NOI18N
         BackupButton.setPreferredSize(new java.awt.Dimension(60, 60));
+        BackupButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BackupButtonActionPerformed(evt);
+            }
+        });
 
         RestoreButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resource/menuLogo/restore_page.png"))); // NOI18N
         RestoreButton.setPreferredSize(new java.awt.Dimension(60, 60));
+        RestoreButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RestoreButtonActionPerformed(evt);
+            }
+        });
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -344,6 +359,30 @@ public class Home extends javax.swing.JFrame {
         this.desktopPane.add(de);
         de.setVisible(true);
     }//GEN-LAST:event_driverEntryButtonActionPerformed
+
+    private void reportButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reportButtonActionPerformed
+        // TODO add your handling code here:
+        allclose();
+        Report re = new Report();
+        this.desktopPane.add(re);
+        re.setVisible(true);
+    }//GEN-LAST:event_reportButtonActionPerformed
+
+    private void BackupButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackupButtonActionPerformed
+        // TODO add your handling code here:
+        allclose();
+        BackUp ba = new BackUp();
+        this.desktopPane.add(ba);
+        ba.setVisible(true);
+    }//GEN-LAST:event_BackupButtonActionPerformed
+
+    private void RestoreButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RestoreButtonActionPerformed
+        // TODO add your handling code here:
+        allclose();
+        Restore re = new Restore();
+        this.desktopPane.add(re);
+        re.setVisible(true);
+    }//GEN-LAST:event_RestoreButtonActionPerformed
 
     
     /**
