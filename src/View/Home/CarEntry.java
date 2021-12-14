@@ -204,21 +204,6 @@ public class CarEntry extends JFrame {
         pack();
     }
 
-    private void helpItemActionPerformed(ActionEvent evt) {
-        /*try {
-            new FrameHelp(FrameHelp.FrameHelpContent.SHOW_HELP);
-        } catch (IOException e) {
-            e.printStackTrace(); // TODO exception
-        }*/
-    }
-
-    private void aboutItemActionPerformed(ActionEvent evt) {
-        /*try {
-            new FrameHelp(FrameHelp.FrameHelpContent.SHOW_ABOUT);
-        } catch (IOException e) {
-            e.printStackTrace(); // TODO exception
-        }*/
-    }
 
     private void recognizeButtonActionPerformed(ActionEvent evt) {
         new RecognizeThread(this).start();
